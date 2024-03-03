@@ -32,7 +32,7 @@ pub const ISO_3166_1: Standard = Standard::new_with_long_ref(
 /// The standard's two-letter code is used as a variant name, in upper
 /// case.  
 /// 
-#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord)]
 #[cfg_attr(feature = "serde", derive(Deserialize, Serialize))]
 pub enum {{ type_name }} {{ "{" }}{% for id in all_ids %}
     /// {{ codes[id].short_name | replace(from="[", to="\[") | replace(from="]", to="\]") }}
